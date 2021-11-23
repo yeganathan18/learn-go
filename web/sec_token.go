@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"gitlab.com/learn/config"
+	"github.com/learn/config"
 )
 
 // Create Token

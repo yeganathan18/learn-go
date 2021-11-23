@@ -1,4 +1,4 @@
-module gitlab.com/learn
+module github.com/learn
 
 go 1.17
 

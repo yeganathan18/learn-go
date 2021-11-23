@@ -2,7 +2,7 @@ package gql
 
 import (
 "github.com/graphql-go/graphql"
-	"gitlab.com/learn/db"
+	"github.com/learn/db"
 )
 
 // Queries

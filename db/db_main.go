@@ -2,7 +2,7 @@ package db
 
 import (
 	"context"
-	"gitlab.com/learn/config"
+	"github.com/learn/config"
 	"log"
 
 	"go.mongodb.org/mongo-driver/mongo"

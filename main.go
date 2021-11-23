@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/graphql-go/handler"
-	"gitlab.com/learn/config"
-	db2 "gitlab.com/learn/db"
-	"gitlab.com/learn/gql"
+	"github.com/learn/config"
+	db2 "github.com/learn/db"
+	"github.com/learn/gql"
 	"log"
 	"net/http"
 )
