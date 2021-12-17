@@ -1,13 +1,13 @@
-package gql
+package utils
+
 
 import (
-"errors"
-"regexp"
-"strings"
+	"errors"
+	"regexp"
+	"strings"
 )
 
-// isRequired
-func isRequired(list map[string]string) error {
+func IsRequired(list map[string]string) error {
 	var err error = nil
 
 	// Email Format

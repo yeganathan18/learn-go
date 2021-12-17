@@ -1,4 +1,4 @@
-package gql
+package types
 
 import (
 "errors"
@@ -51,41 +51,7 @@ var ID = graphql.NewScalar(graphql.ScalarConfig{
 	},
 })
 
-// RecipeType
-var RecipeType = graphql.NewObject(graphql.ObjectConfig{
-	Name: "Recipe",
-	Fields: graphql.Fields{
-		"_id": &graphql.Field{
-			Type: ID,
-		},
-		"name": &graphql.Field{
-			Type: graphql.String,
-		},
-		"imageUrl": &graphql.Field{
-			Type: graphql.String,
-		},
-		"category": &graphql.Field{
-			Type: graphql.String,
-		},
-		"description": &graphql.Field{
-			Type: graphql.String,
-		},
-		"instructions": &graphql.Field{
-			Type: graphql.String,
-		},
-		"createdDate": &graphql.Field{
-			Type: graphql.String,
-		},
-		"likes": &graphql.Field{
-			Type: graphql.Int,
-		},
-		"username": &graphql.Field{
-			Type: graphql.String,
-		},
-	},
-})
 
-// UserType
 var UserType = graphql.NewObject(graphql.ObjectConfig{
 	Name: "User",
 	Fields: graphql.Fields{
@@ -93,21 +59,6 @@ var UserType = graphql.NewObject(graphql.ObjectConfig{
 			Type: ID,
 		},
 		"username": &graphql.Field{
-			Type: graphql.String,
-		},
-		"password": &graphql.Field{
-			Type: graphql.String,
-		},
-		"email": &graphql.Field{
-			Type: graphql.String,
-		},
-		"joinDate": &graphql.Field{
-			Type: graphql.String,
-		},
-		"favorites": &graphql.Field{
-			Type: graphql.NewList(RecipeType),
-		},
-		"token": &graphql.Field{ // graphql only
 			Type: graphql.String,
 		},
 	},

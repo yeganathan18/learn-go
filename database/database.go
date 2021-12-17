@@ -1,8 +1,8 @@
-package db
+package database
 
 import (
 	"context"
-	"github.com/learn/config"
+	"gitlab.com/lyra/backend/config"
 	"log"
 
 	"go.mongodb.org/mongo-driver/mongo"
@@ -12,11 +12,10 @@ import (
 type MongoDB struct {
 	Session *mongo.Client
 	Users   *mongo.Collection
-	Recipes *mongo.Collection
 }
 
 // ConnectDB connects to the database
-func ConnectDB() MongoDB {
+func (db MongoDB) ConnectDB() MongoDB {
 	client, err := mongo.Connect(context.Background(), options.Client().ApplyURI(config.Config.MongoUri))
 	if err != nil {
 		log.Fatal(err)
@@ -27,7 +26,6 @@ func ConnectDB() MongoDB {
 	}
 	return MongoDB{
 		Session: client,
-		Recipes: client.Database(config.Config.MongoDb).Collection("recipes"),
 		Users:   client.Database(config.Config.MongoDb).Collection("users"),
 	}
 }
