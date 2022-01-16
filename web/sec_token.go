@@ -1,14 +1,14 @@
 package web
 
 import (
-	"fmt"
-	"time"
+"fmt"
+"time"
 
-	"github.com/dgrijalva/jwt-go"
-	"github.com/learn/config"
+"github.com/dgrijalva/jwt-go"
+"github.com/learn/config"
 )
 
-// Create Token
+// CreateToken
 // Example:
 /*
 	newToken, _ := createToken("Hide", "hide@gmail.com")
@@ -32,7 +32,7 @@ func CreateToken(user string, email string) (string, error) {
 	return s, nil
 }
 
-// Verify Token
+// VerifyToken
 // Example:
 /*
 	info, err := verifyToken(newToken)
@@ -59,3 +59,4 @@ func VerifyToken(tokenString string) (jwt.MapClaims, error) {
 	}
 
 }
+

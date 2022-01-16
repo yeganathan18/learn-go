@@ -1,7 +1,7 @@
 package web
 
 import (
-	"golang.org/x/crypto/bcrypt"
+"golang.org/x/crypto/bcrypt"
 )
 
 // Generate Password Hash

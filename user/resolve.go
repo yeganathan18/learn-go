@@ -1,9 +1,9 @@
-package resolvers
+package user
 
 import (
 	"github.com/graphql-go/graphql"
-	"gitlab.com/lyra/backend/database"
-	"gitlab.com/lyra/backend/user/utils"
+	"github.com/learn/database"
+	"github.com/learn/user/utils"
 )
 
 var db database.MongoDB

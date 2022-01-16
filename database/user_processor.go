@@ -2,7 +2,7 @@ package database
 
 import (
 	"context"
-	"gitlab.com/lyra/backend/user/models"
+	"github.com/learn/user"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -12,7 +12,7 @@ import (
 
 
 func (db MongoDB) GetAllUsernames() (interface{}, error) {
-	var results []models.UserModel
+	var results []user.UserModel
 	var err error
 
 	ctx, _ := context.WithTimeout(context.Background(), 30*time.Second)
@@ -21,7 +21,7 @@ func (db MongoDB) GetAllUsernames() (interface{}, error) {
 		return nil, err
 	}
 	for cur.Next(ctx) {
-		var elem models.UserModel
+		var elem user.UserModel
 		err = cur.Decode(&elem)
 		if err != nil {
 			return nil, err
@@ -41,7 +41,7 @@ func (db MongoDB) GetAllUsernames() (interface{}, error) {
 
 func (db MongoDB) AddUsername(username string) (interface{}, error) {
 	var err error
-	var results models.UserModel
+	var results user.UserModel
 
 	results.ID = primitive.NewObjectID()
 	results.Username = username

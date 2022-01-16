@@ -2,7 +2,7 @@ package database
 
 import (
 	"context"
-	"gitlab.com/lyra/backend/config"
+	"github.com/learn/config"
 	"log"
 
 	"go.mongodb.org/mongo-driver/mongo"
