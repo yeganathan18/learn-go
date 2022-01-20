@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    container_name: learn_mongodb
+    restart: unless-stopped
+    image: mongo:5.0.2
+    environment: 
+      # - MONGO_INITDB_ROOT_USERNAME=root
+      # - MONGO_INITDB_ROOT_PASSWORD=123456
+      - MONGO_INITDB_DATABASE=learn
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-data:/data/db
+
+volumes:
+  mongodb-data:
+    driver: local
