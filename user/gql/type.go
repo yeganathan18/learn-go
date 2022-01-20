@@ -1,12 +1,12 @@
-package user
+package gql
 
 import (
-"errors"
-"log"
+	"errors"
+	"log"
 
-"github.com/graphql-go/graphql"
-"github.com/graphql-go/graphql/language/ast"
-"github.com/graphql-go/graphql/language/kinds"
+	"github.com/graphql-go/graphql"
+	"github.com/graphql-go/graphql/language/ast"
+	"github.com/graphql-go/graphql/language/kinds"
 )
 
 // _validate for ID support
@@ -51,7 +51,6 @@ var ID = graphql.NewScalar(graphql.ScalarConfig{
 	},
 })
 
-
 var UserType = graphql.NewObject(graphql.ObjectConfig{
 	Name: "User",
 	Fields: graphql.Fields{
@@ -63,4 +62,3 @@ var UserType = graphql.NewObject(graphql.ObjectConfig{
 		},
 	},
 })
-

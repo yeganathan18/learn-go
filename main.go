@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
+
 	"github.com/graphql-go/handler"
 	"github.com/learn/config"
 	db2 "github.com/learn/database"
-	gql "github.com/learn/user"
-	"log"
-	"net/http"
+	"github.com/learn/user/gql"
 )
 
 func helloWorld(w http.ResponseWriter, r *http.Request) {
@@ -53,4 +54,3 @@ func disableCors(h http.Handler) http.Handler {
 		h.ServeHTTP(w, r)
 	})
 }
-

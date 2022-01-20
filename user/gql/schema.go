@@ -1,4 +1,4 @@
-package user
+package gql
 
 import (
 	"log"
@@ -18,4 +18,3 @@ func InitSchema() graphql.Schema {
 	return graphqlSchema
 
 }
-

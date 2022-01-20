@@ -2,14 +2,13 @@ package database
 
 import (
 	"context"
-	"github.com/learn/user"
 	"time"
 
+	"github.com/learn/user"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
-
 
 func (db MongoDB) GetAllUsernames() (interface{}, error) {
 	var results []user.UserModel
@@ -37,7 +36,6 @@ func (db MongoDB) GetAllUsernames() (interface{}, error) {
 	}
 	return results, nil
 }
-
 
 func (db MongoDB) AddUsername(username string) (interface{}, error) {
 	var err error
